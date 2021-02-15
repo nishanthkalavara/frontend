@@ -1,23 +1,20 @@
 /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
 function openNav() {
     document.getElementById("mySidebar").style.width = "50%";
-    //document.getElementById("main").style.marginRight = "50%";
   }
   
   /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
   function closeNav() {
     document.getElementById("mySidebar").style.width = "0";
-    //document.getElementById("main").style.marginRight = "0";
   }
 
 
-// let submitBtn = document.getElementById('submitBtn');
-// submitBtn.addEventListener('click', submitHandler);
+
 
 function refreshHandler() {
 
   const xhr = new XMLHttpRequest();
-  xhr.open('GET', 'http://100.25.47.63:8081/memes', true);
+  xhr.open('GET', 'http://18.212.22.42:8081//memes', true);
   
   xhr.onload = function () {
       if(this.status === 200){
@@ -57,7 +54,7 @@ function refreshHandler() {
 
   // send the request
   xhr.send();
-  console.log("We are done fetching employees!");
+  console.log("Data fetched!");
   
 }
 
@@ -68,7 +65,7 @@ function submitHandler(that) {
     const xhr = new XMLHttpRequest();
     console.log("helo");
 
-    xhr.open('POST', 'http://100.25.47.63:8081/memes', true);
+    xhr.open('POST', 'http://18.212.22.42:8081//memes', true);
     xhr.getResponseHeader('Content-type', 'application/json');
 
 
@@ -76,7 +73,7 @@ function submitHandler(that) {
         if(this.status === 200){
             refreshHandler();
             console.log(this.responseText);
-            console.log("no error")
+            console.log("Data succesfully put into database")
         }
         else{
             console.log("Some error occured");
