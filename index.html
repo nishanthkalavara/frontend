@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="refreshHandler()"> 
+  
+    <link rel="stylesheet" href="styles.css">
+    <script src="myscripts.js"></script>
+   
+    <div class="flex-head">
+    <h1 style="color:royalblue;">X Meme</h1>
+    <button class="openbtn"  onclick="openNav()" > Create Xmeme</button>
+     
+    </div>
+
+    <div >Take a break and Enjoy the memes !!</div> 
+    <hr>
+    <div id="gal"> </div>
+
+    
+    <div class="clearfix"></div>
+    
+
+
+
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="container">
+            <form onsubmit="submitHandler(this)">
+              <hr>
+              <h3>Let's create a meme !!</h3>
+              <hr>
+              <div class="row">
+                <div class="col-25">
+                  <label for="f-name">Meme Owner</label><span class="required">*</span>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="f-name" name="fullname" placeholder="Enter your full name" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="f-caption">Caption</label><span class="required">*</span>
+                </div>
+                <div class="col-75">
+                  <textarea id="f-caption" name="caption" placeholder="Be creative with the caption" style="height:150px" required></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="f-url">Meme URL</label><span class="required">*</span>
+                </div>
+                <div class="col-75">
+                  <input type="url" id="f-url" name="imgurl" placeholder="Enter URL of your meme here" required>
+                </div>
+              </div>
+              <div class="row">
+              <input type="submit" id="submitBtn"  value="Submit">
+              <input type="reset" value="Reset">
+              
+              </div>
+            </form>
+          </div>
+      </div>
+      
+      
+</body>
+</html>
+
+
